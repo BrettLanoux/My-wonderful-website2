@@ -112,7 +112,8 @@
             padding-right: 500px;
             display: flex;
         }
-        ul1
+        ul1.a
+        
 /*outline-was-here*/
             h2 {
                 font-size:20px;
@@ -122,100 +123,7 @@
          .content h1 {
              color: black;
          }
-         
-         #portfolio {
-             list-style-type: none;
-             padding-left: 0px;
-         }
 
-         #portfolio2 {
-            list-style-type: none;
-             padding-left: 0px;
-         }
-
-         #portfolio3 {
-            list-style-type: none;
-             padding-left: 0px;
-         }
-
-         #portfolio li {
-  height: 20px;
-  width: 20px;
-  background-color: slategrey;
-  border-radius: 50%;
-  display: flex;
-  position: absolute;
-  top: 40px;
-  left: 420px;
-  text-decoration: underline;
-  text-decoration-color: black;
-        }
-
-        #portfolio2 li {
-  height: 20px;
-  width: 20px;
-  background-color: slategrey;
-  border-radius: 50%;
-  display: flex;
-  position: absolute;
-  top: 40px;
-  left: 140px;
-  text-align-last: center;
-  text-decoration: underline;
-  text-decoration-color: black;
-        }
-
-        #portfolio3 li {
-  height: 20px;
-  width: 20px;
-  background-color: slategrey;
-  border-radius: 50%;
-  display: flex;
-  position: absolute;
-  top: 40px;
-  left: 275px;
-  text-decoration: underline;
-  text-decoration-color: black;
-        }
-         
-         #portfolio li:hover {
-             background: white;
-         } 
-
-         #portfolio2 li:hover {
-             background: white;
-         } 
-
-         #portfolio3 li:hover {
-             background: white
-         }
-         
-         #portfolio a {
-             color: #454545;
-             padding-left: 30px;
-         }
-
-         #portfolio2 a {
-             color: #454545;
-             padding-left: 30px;
-         }
-
-         #portfolio3 a {
-             color: #454545;
-             padding-left: 30px;
-         }
-
-         .contCir {
-             padding-top: 3px;
-         }
-         .contBox {
-             padding-right: 20px;
-             padding-top: 2px;
-         }
-         .contPlat {
-        position: absolute;
-        top: 2px;
-         }
          /* The sidebar menu */
 .sidenav {
   height: 17%; /* Full-height: remove this if you want "auto" height */
@@ -262,6 +170,45 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+.dropbtn {
+  background-color: slategrey;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  position: absolute;
+  top: 150px;
+  left: 500px
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: slategrey;}
+
         </style>
     </head>
 
@@ -301,18 +248,18 @@
      <main>
          <div class="content">
              <h2>Portfolio</h2>
-             <ul id="portfolio">
-                <li><a class="contPlat" href="projects/platformer/">Platformer</a></li>
-            </ul>
-            <ul2 id="portfolio2">
-                <li><a class="contBox" href="projects/bouncing-box/">Bouncing Box</a></li>
-            </ul2>
-            <ul3 id="portfolio3">
-                <li><a class="contCir" href="projects/circularity/">Circularity</a></li>
-            </ul3>
-
          </div>
      </main>
       </div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="projects/platformer/">Platformer</a>
+    <a href="projects/bouncing-box/">Bouncing Box</a>
+    <a href="projects/circularity/">Circularity</a>
+  </div>
+</div>
+
     </body>
 </html>
