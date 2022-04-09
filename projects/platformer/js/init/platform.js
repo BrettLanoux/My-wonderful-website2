@@ -28,26 +28,46 @@
 
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
-        createPlatform(
-            710, 600, 0.2, 0.2
-        );
-        createPlatform(
-            810, 500, 0.2, 0.2
-        );
-        createPlatform(
-            810, 400, 0.2, 0.2
-        );
-        createPlatform(
-            810, 300, 0.2, 0.2
-        );
-        createPlatform(
-            810, 200, 0.2, 0.2
-        );
-        createPlatform(
-            810, 100, 0.2, 0.2
-        );
+        function peet() {
+            createPlatform(
+                110, 660, 0.2, 0.2
+            );
+            setTimeout(peetTwo(), 1000);
+        }
+        function peetTwo() {
+            createPlatform(
+                190, 650, 0.2, 0.2
+            );
+            setTimeout(peetThree(), 1000);
+        }
+        function peetThree() {
+            createPlatform(
+                270, 640, 0.2, 0.2
+            );
+            setTimeout(peetFour(), 1000);
+        }
+        function peetFour() {
+            createPlatform(
+                350, 630, 0.2, 0.2
+            );
+            setTimeout(peetFive(), 1000);
+        }
+        function peetFive() {
+            createPlatform(
+                430, 620, 0.2, 0.2
+            );
+            setTimeout(peetSix(), 1000);
+        }
+        function peetSix() {
+            createPlatform(
+                510, 610, 0.2, 0.2
+            );
+        }
         createPlatform(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
-
+        
+        
+        
+        
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////

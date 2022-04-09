@@ -48,6 +48,7 @@
                 player.run();
             } else if (cursors.down.isDown) {
                 player.duck();
+                peet();
             } else {}
             
             //  Allow the player to jump if they are touching the ground.
