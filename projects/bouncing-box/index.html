@@ -6,9 +6,8 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
+			width: 140px;
 			height: 70px;
-			background-color: teal;
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -16,17 +15,13 @@
 			top: 100px;
 			left: 0px;  /* <--- Change me! */
 		}
-		.board{
-			height: 100vh;
-		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
 </head>
-<body class="board">
+<body onkeydown="getKeyAndMove(event)">
 	<!-- HTML for the box -->
-	<div class="box">?</div>
-
+	<img class="box" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/330px-DVD_logo.svg.png">
 	<script>
 		(function(){
 			'use strict'
@@ -41,16 +36,15 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 50);
+			setInterval(update, 1);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
-
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY);
 			}
-
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
 				box.text(newText);
@@ -61,18 +55,33 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
-			
+			var positionX = 0;
+			var positionY = 0;
+			var points = 0;
+			var speedX = 1;
+			var speedY = 1;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				
-
-			};
+				positionX = positionX + speedX;
+				positionY = positionY + speedY;
+				moveBoxTo(positionX, positionY);
+				if (positionY > 545) {
+					speedY = speedY * -1;
+				}
+				if (positionY < 0) {
+					speedY = speedY * -1;
+				}
+				if (positionX > 1140) {
+					speedX = speedX * -1;
+				}
+				if (positionX < 0) {
+					speedX = speedX * -1;
+				}
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -80,11 +89,29 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
-
+				var randoX = Math.floor(Math.random() * (115 - 1) + 1);
+				var randoY = Math.floor(Math.random() * (55 - 1) + 1);
+				var randNumX = randoX * 10;
+				var randNumY = randoY * 10;
+				positionX = randNumX;
+				positionY = randNumY;
+				changeBoxText(points);
+				points += 1;
+				if (speedX >= 0) {
+					speedX += 1;
+				}
+				else if (speedX < 0) {
+					speedX -= 1;
+				}
+				if (speedY >= 0) {
+					speedY += 1;
+				}
+				else if (speedY < 0) {
+					speedY -= 1;
+				}
+				moveBoxTo(positionX, positionY);
 			};
-		})();
+		}())
 	</script>
 </body>
 </html>
