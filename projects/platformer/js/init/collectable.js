@@ -36,19 +36,9 @@
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
-        createCollectable(type.steve, 200, 100,);
-        createCollectable(
-            type.db, 100, 100
-            );
-        createCollectable(
-            type.max, 200, 200
-            );
-        createCollectable(
-            type.grace, 300, 300
-        );
-        createCollectable(
-            type.kennedi, 400, 400
-        );
+        createCollectable(type.kennedi, 715, 325);
+        createCollectable(type.db, 350, 500);
+        createCollectable(type.grace, 400, 250);
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////

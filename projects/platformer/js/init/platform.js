@@ -64,11 +64,12 @@
             );
         }
         createPlatform(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
-        
-        
-        
-        
-        
+        createPlatform(400, 460, 0.8);
+        createPlatform(100, 600, 0.3);
+        createPlatform(250, 550, 0.6);    
+        createPlatform(700, 400, 0.2);
+        createPlatform(350, 330, 0.3);
+        createPlatform(780, 225, 0.04, 6);
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     }

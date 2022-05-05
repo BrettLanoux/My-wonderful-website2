@@ -25,9 +25,9 @@
         let createCannon = cannon.create;
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
-
-        createCannon("left", 100);
-        
+        createCannon("left", 400, 10000);
+        createCannon("right", 600, 5000);
+        createCannon("left", 300, 20000);
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     };
