@@ -7,7 +7,7 @@
  * See: http://www.createjs.com/Docs/EaselJS/classes/Graphics.html
  *
  */
-(function (window) {
+ (function (window) {
     const TYPE_RECTANGULAR  = 'retangular';
     const TYPE_CIRCULAR     = 'circular';
     const TYPE_TRIANGULAR   = 'triangular';
